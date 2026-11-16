@@ -1,3 +1,4 @@
+```python
 import streamlit as st
 
 st.markdown("""
@@ -24,4 +25,10 @@ st.divider()
 
 st.write(f"• ส่วนลด ({discount_percent:.0f}%): -{discount:.2f} บาท")
 st.write(f"• ราคาหลังหักส่วนลด: {price_after_discount:.2f} บาท")
-st.write(f
+st.write(f"• ภาษีมูลค่าเพิ่ม (VAT 7%): +{vat:.2f} บาท")
+
+st.header(f"• ราคาสุทธิที่ต้องจ่าย: {net_price:.2f} บาท")
+
+st.divider()
+
+st.write("นางสาวธัญพิมล แสนใจพรม เลขที่ 14 ม.4/5")
