@@ -5,14 +5,14 @@ st.title("🧾 แอปคำนวณส่วนลดและ VAT 7%")
 price = st.number_input("กรอกราคาเต็มของสินค้า (บาท):", min_value=0.0, value=1000.0)
 discount_percent = st.number_input("กรอกส่วนลด (%):", min_value=0.0, max_value=100.0, value=20.0)
 
-discount_amount = price * (discount_percent / 100)
-price_after_discount = price - discount_amount
+discount = price * (discount_percent / 100)
+price_after_discount = price - discount
 vat = price_after_discount * 0.07
 net_price = price_after_discount + vat
 
 st.divider()
 
-st.write(f"• ส่วนลด ({discount_percent:.0f}%): -{discount_amount:.2f} บาท")
+st.write(f"• ส่วนลด ({discount_percent:.0f}%): -{discount:.2f} บาท")
 st.write(f"• ราคาหลังหักส่วนลด: {price_after_discount:.2f} บาท")
 st.write(f"• ภาษีมูลค่าเพิ่ม (VAT 7%): +{vat:.2f} บาท")
 
@@ -20,4 +20,4 @@ st.header(f"• ราคาสุทธิที่ต้องจ่าย: {n
 
 st.divider()
 
-st.write("นางธัญพิมล แสนใจพรม เลขที่ 14 ม.4/5")
+st.write("นางสาวธัญพิมล แสนใจพรม เลขที่ 14 ม.4/5")
